@@ -1,2 +1,0 @@
-# vanilla
-Mega chat hub
