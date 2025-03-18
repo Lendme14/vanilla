@@ -49,5 +49,13 @@ def login():
 
     return render_template("login.html")
 
+@app.route("/profile")
+def profile():
+    if "user" in session:
+        # Display user profile
+        return f"Welcome, user {session['user']}!"
+    else:
+        return redirect("/login")
+
 if __name__ == "__main__":
     app.run(debug=True)
