@@ -203,3 +203,13 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 }
+// Simulated functions — replace with Firebase logic
+function logout() {
+  alert("Logged out!");
+  window.location.href = "login.html";
+}
+
+function deleteAccount() {
+  alert("Account permanently deleted.");
+  window.location.href = "signup.html";
+}
