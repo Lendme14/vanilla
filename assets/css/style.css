@@ -30,3 +30,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
+.profile-box {
+  width: 300px;
+}
