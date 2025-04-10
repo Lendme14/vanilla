@@ -114,19 +114,3 @@ header, footer {
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* footer section */
-
-.footer-nav-btn {
-  font-size: 12px;
-  text-align: center;
-  color: white;
-}
-
-.footer-nav-btn i {
-  font-size: 20px;
-  display: block;
-}
-
-.footer-nav-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
