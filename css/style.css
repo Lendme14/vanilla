@@ -108,3 +108,8 @@ header, footer {
   border-radius: 20px;
   overflow: hidden;
 }
+/* signup & login form blurr */
+.backdrop-blur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
