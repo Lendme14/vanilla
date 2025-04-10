@@ -213,3 +213,30 @@ function deleteAccount() {
   alert("Account permanently deleted.");
   window.location.href = "signup.html";
 }
+
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const username = document.getElementById('loginUsername').value;
+  const password = document.getElementById('loginPassword').value;
+
+  // Add Firebase login here
+  alert(`Logged in as ${username}`);
+  window.location.href = "profile.html";
+});
+
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const username = document.getElementById('signupUsername').value;
+  const password = document.getElementById('signupPassword').value;
+
+  if (!/^[A-Za-z0-9]{6,12}$/.test(username)) {
+    alert("Username must be 6 to 12 characters and contain only letters and numbers.");
+    return;
+  }
+
+  // Add Firebase signup here
+  alert(`Account created for ${username}`);
+  window.location.href = "profile.html";
+});
+
+
