@@ -96,3 +96,15 @@ header, footer {
 #services { background-color: #e6f7ff; }
 #projects { background-color: #fff0f5; }
 #contact { background-color: #f0fff0; }
+
+/* body slider section */
+
+.carousel-inner img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.carousel-inner {
+  border-radius: 16px;
+  overflow: hidden;
+}
