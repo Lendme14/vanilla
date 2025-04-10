@@ -13,69 +13,42 @@ const db = getDatabase(app);
 const storage = getStorage(app);
 
 // =================== LOGIN LOGIC ===================
-function loginPageLogic() {
-  // your login code
-  import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/firebase-config";
-
-const loginForm = document.getElementById("loginForm");
-loginForm.addEventListener("submit", (e) => {
+  // Firebase Signup
+document.getElementById('signupForm').addEventListener('submit', function (e) {
   e.preventDefault();
+  const email = document.getElementById('signupEmail').value;
+  const username = document.getElementById('signupUsername').value;
+  const password = document.getElementById('signupPassword').value;
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  signInWithEmailAndPassword(auth, email, password)
+  firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
+      // Save username in Firestore or Realtime DB
       const user = userCredential.user;
-      console.log("Logged in as:", user.email);
-      window.location.href = "chat.html"; // Redirect to chat page
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.error("Login error:", errorCode, errorMessage);
-      alert("Failed to log in: " + errorMessage);
-    });
-});
-}
-
-function signupPageLogic() {
-  // your signup code
-  import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { getDatabase, ref, set } from "firebase/database";
-import { auth, db } from "../firebase/firebase-config";
-
-const signupForm = document.getElementById("signupForm");
-signupForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const username = document.getElementById("username").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log("User created:", user.email);
-
-      // Save user data in Firebase Realtime Database
-      const userRef = ref(db, 'users/' + user.uid);
-      set(userRef, {
+      return firebase.firestore().collection('users').doc(user.uid).set({
         username: username,
-        avatarUrl: "",  // Initially empty, can be updated later
+        email: email
       });
-
-      window.location.href = "profile.html"; // Redirect to profile page after signup
     })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.error("Signup error:", errorCode, errorMessage);
-      alert("Failed to sign up: " + errorMessage);
-    });
+    .then(() => {
+      alert("Signup successful!");
+      bootstrap.Modal.getInstance(document.getElementById('signupModal')).hide();
+    })
+    .catch(error => alert(error.message));
 });
-}
+
+// Firebase Login
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const email = document.getElementById('loginEmail').value;
+  const password = document.getElementById('loginPassword').value;
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(() => {
+      alert("Login successful!");
+      bootstrap.Modal.getInstance(document.getElementById('loginModal')).hide();
+    })
+    .catch(error => alert(error.message));
+});
 
 function profilePageLogic() {
   // your profile code
