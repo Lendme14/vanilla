@@ -36,3 +36,63 @@ body, html {
   background-color: #444;
   color: #fff;
 }
+
+/* index body section*/
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.block {
+  padding: 60px 20px;
+  min-height: 100vh;
+  border-bottom: 1px solid #ccc;
+  margin: 20px;
+  border-radius: 15px;
+  background-color: white;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.block:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fdfdfd;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.column:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* color for page section */
+
+#about { background-color: #f9f9f9; }
+#services { background-color: #e6f7ff; }
+#projects { background-color: #fff0f5; }
+#contact { background-color: #f0fff0; }
