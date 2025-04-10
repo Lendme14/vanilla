@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/firebase-config.js" type="module"></script>
+</head>
+<body>
+  <header>
+    <!-- Include header here -->
+  </header>
+
+  <main>
+    <h2>Chat Room</h2>
+    <div id="chatBox"></div>
+    <textarea id="messageInput" placeholder="Type a message"></textarea>
+    <button id="sendBtn">Send</button>
+  </main>
+
+  <footer>
+    <!-- Include footer here -->
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
