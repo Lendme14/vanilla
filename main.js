@@ -212,4 +212,34 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
   window.location.href = "profile.html";
 });
 
+// firebase auth user ligic
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    if (user.emailVerified) {
+      // User is verified, allow access
+      console.log("Email is verified");
+      // Show profile/chat
+    } else {
+      // Email not verified
+      alert("Please verify your email before continuing.");
+      document.getElementById("verifySection").style.display = "block";
+      firebase.auth().signOut(); // Auto sign out for now
+    }
+  }
+});
 
+// verify your email 
+
+document.getElementById("resendEmailBtn").addEventListener("click", () => {
+  const user = firebase.auth().currentUser;
+  if (user && !user.emailVerified) {
+    user.sendEmailVerification()
+      .then(() => {
+        alert("Verification email sent. Please check your inbox.");
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        alert("Something went wrong. Try again later.");
+      });
+  }
+});
