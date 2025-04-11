@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YouCollab - Welcome</title>
+  <title> Zuch tube studio </title>
 
   <!-- Link your main stylesheet -->
   <link rel="stylesheet" href="welcome.css" />
@@ -17,14 +17,14 @@
   <div class="video-background">
     <video autoplay muted loop playsinline>
       <source src="image/lv_0_20250411111529.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+      collaborate and engage with premium YouTube Kings and queens 👑
     </video>
 
     <!-- Top Navbar -->
     <header class="d-flex justify-content-between align-items-center p-3 bg-transparent position-absolute w-100">
       <div class="d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="YouCollab Logo" style="height: 60px;" />
-        <span class="ms-2 fw-bold fs-4 text-white">YouCollab</span>
+        <img src="image/output-onlinepngtools (2).png" alt="YouCollab Logo" style="height: 60px;" />
+        <span class="ms-2 fw-bold fs-4 text-white"> zuch-X </span>
       </div>
 
       <div class="dropdown">
@@ -41,7 +41,7 @@
 
     <!-- Centered Overlay Content -->
     <div class="overlay-content text-white text-center px-3">
-      <h1 class="display-4 fw-bold mb-3">Welcome to YouCollab</h1>
+      <h1 class="display-4 fw-bold mb-3">Welcome to Zuch-X </h1>
       <p class="lead mb-4">
         A global space for creators to connect, share, and collaborate on powerful video ideas. Let your vision meet community.
       </p>
@@ -74,6 +74,12 @@
 </div>
 
 <!-- Signup Modal -->
+  firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in
+    window.location.href = "main.html";
+  }
+});
 <!-- Sign Up Modal -->
 <div class="modal fade" id="signupModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
