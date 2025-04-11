@@ -38,7 +38,8 @@ header {
 /* footer section on main */
 
 .logo-scroller-section {
-  background-color: #000;
+  background-color: black;
+  padding: 10px
 }
 
 .logo-scroll-wrapper {
