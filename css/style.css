@@ -114,3 +114,14 @@ header, footer {
   -webkit-backdrop-filter: blur(10px);
 }
 
+/* logo section */
+.logo-section img {
+  height: 40px;
+  width: auto;
+}
+
+@media (max-width: 576px) {
+  .logo-section span {
+    font-size: 1rem;
+  }
+}
