@@ -74,12 +74,7 @@
 </div>
 
 <!-- Signup Modal -->
-  firebase.auth().onAuthStateChanged((user) => {
-  if (user) {
-    // User is signed in
-    window.location.href = "main.html";
-  }
-});
+  
 <!-- Sign Up Modal -->
 <div class="modal fade" id="signupModal" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
@@ -130,6 +125,13 @@
   </div>
 </section>
 </footer>
-  
+  <script>
+    firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    // User is signed in
+    window.location.href = "main.html";
+  }
+});
+  </script>
 </body>
 </html>
