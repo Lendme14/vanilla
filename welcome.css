@@ -13,8 +13,6 @@
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 1;
-  object-fit: cover;
-  transform: scale(1.95); /* Zoom out a bit */
 }
 
 .overlay-content {
