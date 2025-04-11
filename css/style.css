@@ -114,6 +114,12 @@ header, footer {
   -webkit-backdrop-filter: blur(10px);
 }
 
+.modal-content {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+}
+
 /* logo section */
 .logo-section img {
   height: 60px;
