@@ -118,6 +118,7 @@ header, footer {
 .logo-section img {
   height: 60px;
   width: auto;
+  font-size: 1rem;
 }
 
 @media (max-width: 576px) {
