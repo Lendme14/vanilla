@@ -1,0 +1,74 @@
+.video-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 700px;
+}
+
+header {
+  z-index: 3;
+}
+
+/* sign up transparent blur blur bg. */
+.modal-content {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+}
+
+/* footer section on main */
+
+.logo-scroller-section {
+  background-color: #000;
+}
+
+.logo-scroll-wrapper {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-scroll {
+  display: inline-block;
+  animation: scrollLeft 20s linear infinite;
+}
+
+.logo-scroll img {
+  height: 40px;
+  margin: 0 30px;
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.logo-scroll img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
