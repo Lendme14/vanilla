@@ -53,10 +53,10 @@ header, footer {
 }
 
 .block {
-  padding: 60px 20px;
-  min-height: 100vh;
+  padding: 40px 40px;
+  min-height: 60vh;
   border-bottom: 1px solid #ccc;
-  margin: 20px;
+  margin: 15px;
   border-radius: 15px;
   background-color: white;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
