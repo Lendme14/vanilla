@@ -70,6 +70,8 @@ header, footer {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .column {
@@ -84,11 +86,7 @@ header, footer {
 .column:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
+
 
 /* color for page section */
 
