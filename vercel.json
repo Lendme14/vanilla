@@ -1,0 +1,17 @@
+{
+  "rewrites": [
+    { "source": "/profile", "destination": "/profile.html" }
+  ]
+}
+
+{
+  "rewrites": [
+    { "source": "/zuchx", "destination": "/main.html" }
+  ]
+}
+
+{
+  "rewrites": [
+    { "source": "/welcome", "destination": "/index.html" }
+  ]
+}
