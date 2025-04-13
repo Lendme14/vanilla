@@ -6,7 +6,7 @@
 
 {
   "rewrites": [
-    { "source": "/zuchx", "destination": "/main.html" }
+    { "source": "/main/index.html", "destination": "/zuchx" }
   ]
 }
 
