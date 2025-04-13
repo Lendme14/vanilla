@@ -18,6 +18,6 @@
 
 {
   "rewrites": [
-    { "source": "/community-forum", "destination": "/chat.html" }
+    { "source": "/community", "destination": "/chat.html" }
   ]
 }
